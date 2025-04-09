@@ -171,12 +171,17 @@ const InvoiceDetails = () => {
                                 sx={{
                                     mt: { xs: 2, md: 3 },
                                     ml: 4,
-                                    height: '35px', 
-                                    borderRadius: '20px' 
+                                    height: '35px',
+                                    borderRadius: '20px',
+                                    backgroundColor: 'brown',
+                                    '&:hover': {
+                                        backgroundColor: '#5c4033', // darker brown for hover
+                                    },
                                 }}
                             >
                                 Add
                             </Button>
+
 
                         </Grid>
 
@@ -209,8 +214,13 @@ const InvoiceDetails = () => {
                                                 <Button
                                                     variant="contained"
                                                     size="small"
-                                                    color="primary"
-                                                    sx={{ mr: 1 }}
+                                                    sx={{
+                                                        mr: 1,
+                                                        backgroundColor: 'brown',
+                                                        '&:hover': {
+                                                            backgroundColor: '#5c4033',
+                                                        },
+                                                    }}
                                                     onClick={(event) => {
                                                         event.stopPropagation();
                                                         console.log('View clicked for ID:', row.id);
@@ -218,6 +228,7 @@ const InvoiceDetails = () => {
                                                 >
                                                     View
                                                 </Button>
+
 
                                             </TableCell>
                                             <TableCell>{row.licenseAdded}</TableCell>
