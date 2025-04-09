@@ -298,7 +298,6 @@ const ShipmentDetails = () => {
                 <FormLabel sx={{ fontSize: "0.875rem" }}>BL/AWB Date</FormLabel>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
-                    // label="BL/AWB Date"
                     value={blAwbDate}
                     onChange={(newVal) => setBlAwbDate(newVal)}
                     slotProps={{
@@ -344,6 +343,7 @@ const ShipmentDetails = () => {
                 <FormLabel sx={{ fontSize: "0.875rem"}}>Shipment Date</FormLabel>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
+
                     value={shipmentDate}
                     onChange={(newVal) => setShipmentDate(newVal)}
                     slotProps={{
