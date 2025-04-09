@@ -147,29 +147,39 @@ const InvoiceDetails = () => {
     const visibleRows = rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
 
     return (
-        <Box sx={{ p: 2 }}>
+        <Box >
             <Accordion defaultExpanded>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                     <Typography variant="h6">Goods Details</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Grid container spacing={2} mb={2}>
-                        <Grid 
-                        sx={{
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "flex-start",
-                        }}
-                        size={{ xs: 12, md: 4 }}>
+                    <Grid container spacing={2} mb={2} mt={1} ml={"1px"}>
+                        <Grid
+                            sx={{
+                                display: "flex",
+                                flexDirection: "row",
+                                alignItems: "flex-start",
+
+                            }}
+                            size={{ xs: 12, md: 4 }}>
                             <FormControl fullWidth variant="outlined">
                                 <FormLabel>HS Code</FormLabel>
                                 <TextField variant="outlined" size="small" />
                             </FormControl>
-                            <Button variant="contained" sx={{ mt: { xs: 2, md: 4 } }}>
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    mt: { xs: 2, md: 3 },
+                                    ml: 4,
+                                    height: '35px', 
+                                    borderRadius: '20px' 
+                                }}
+                            >
                                 Add
                             </Button>
+
                         </Grid>
-                        
+
                     </Grid>
                     <Paper sx={{ width: '100%', mb: 2 }}>
                         <EnhancedTableToolbar numSelected={selected.length} onDelete={handleDelete} />
@@ -218,7 +228,7 @@ const InvoiceDetails = () => {
                         </TableContainer>
 
                     </Paper>
-                    <Box
+                    {/* <Box
                         sx={{
                             display: "flex",
                             flexDirection: "column",
@@ -256,7 +266,38 @@ const InvoiceDetails = () => {
                                 </Typography>
                             }
                         />
-                    </Box>
+                    </Box> */}
+                    <Grid container >
+                        <Grid size={{ md: 12 }}>
+                            <Box sx={{ display: "flex", alignItems: "flex-start", width: "100%" }}>
+                                <Checkbox
+                                    checked={checked1}
+                                    onChange={handleCheckboxChange1}
+                                    sx={{ padding: 0, marginRight: 1 }}
+                                />
+                                <Typography variant="body2" textAlign={"left"}>
+                                    This is to certify that end use of goods involved in this transaction is not for arms and ammunition related purpose{" "}
+                                    {" "}
+                                    <span style={{ color: "red" }}>*</span>
+                                </Typography>
+                            </Box>
+                        </Grid>
+
+                        <Grid size={{ md: 12 }}>
+                            <Box sx={{ display: "flex", alignItems: "flex-start", width: "100%" }}>
+                                <Checkbox
+                                    checked={checked2}
+                                    onChange={handleCheckboxChange2}
+                                    sx={{ padding: 0, marginRight: 1 }}
+                                />
+                                <Typography variant="body2" textAlign={"left"}>
+                                    This transaction does not violate the provisions of OFAC/US/UN/EU/India and other sanctions (as applicable) that are currently in force{" "}
+                                    {" "}
+                                    <span style={{ color: "red" }}>*</span>
+                                </Typography>
+                            </Box>
+                        </Grid>
+                    </Grid>
 
                 </AccordionDetails>
             </Accordion>
@@ -265,7 +306,7 @@ const InvoiceDetails = () => {
                     <Typography variant="h6">Invoice Details</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2} mt={1} ml={1}>
                         <Grid size={{ xs: 12, md: 4 }}>
                             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 2 }}>
                                 <FormControlLabel

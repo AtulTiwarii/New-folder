@@ -35,7 +35,7 @@ const Declaration = () => {
                                 <Checkbox 
                                     checked={checked1} 
                                     onChange={handleCheckboxChange1} 
-                                    sx={{ marginTop: "3px", padding: 0, marginRight: 1 }} 
+                                    sx={{  padding: 0, marginRight: 1 }} 
                                 />
                                 <Typography variant="body2" textAlign={"left"}>
                                     I/We hereby declare that all Foreign Exchange transactions, as may be entrusted 
@@ -56,7 +56,7 @@ const Declaration = () => {
                                 <Checkbox 
                                     checked={checked2} 
                                     onChange={handleCheckboxChange2} 
-                                    sx={{ marginTop: "3px", padding: 0, marginRight: 1 }} 
+                                    sx={{ padding: 0, marginRight: 1 }} 
                                 />
                                 <Typography variant="body2" textAlign={"left"}>
                                     I/We declare that the statements made by me/us on this form are true and that 

@@ -35,7 +35,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 const ShipmentDetails = () => {
-  
+
   const [checked1, setChecked1] = useState(false);
   const [countryOfOrigin, setCountryOfOrigin] = useState("");
   const [consignorCountry, setConsignorCountry] = useState("");
@@ -44,7 +44,7 @@ const ShipmentDetails = () => {
   const [records, setRecords] = useState([]);
   const [selectedRows, setSelectedRows] = useState([]);
 
-  
+
   const [openDialog, setOpenDialog] = useState(false);
 
   const [blAwbNo, setBlAwbNo] = useState("");
@@ -68,12 +68,12 @@ const ShipmentDetails = () => {
   const countryOptions = [
     { value: "USA", label: "United States" },
     { value: "IND", label: "India" },
-    { value: "UK",  label: "United Kingdom" },
+    { value: "UK", label: "United Kingdom" },
     { value: "AUS", label: "Australia" },
     { value: "CAN", label: "Canada" },
   ];
 
-  
+
   const lay = { xs: 12, md: 4 };
 
   const handleCheckboxChange1 = (event) => {
@@ -92,14 +92,14 @@ const ShipmentDetails = () => {
   };
   const handleCloseDialog = () => {
     setOpenDialog(false);
-   
+
     setBlAwbNo("");
     setBlAwbDate(null);
     setPortOfLoading("");
     setPortOfDischarge("");
     setShipmentDate(null);
     setShipmentTerms("");
-  
+
     setVesselName("");
     setTransporterprovider("");
     setPortOfTransShipment("");
@@ -111,7 +111,7 @@ const ShipmentDetails = () => {
     setBelowDetailsSame(false);
   };
 
- 
+
   const handleSaveRecord = () => {
     const newRecord = {
       blAwbNo,
@@ -134,7 +134,7 @@ const ShipmentDetails = () => {
     );
   };
 
-  
+
   const handleDeleteSelected = () => {
     setRecords((prev) =>
       prev.filter((_, index) => !selectedRows.includes(index))
@@ -189,7 +189,7 @@ const ShipmentDetails = () => {
                 <FormLabel sx={{ alignSelf: "start" }}>Earliest Shipment Date</FormLabel>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
-                   
+
                     slotProps={{
                       textField: {
                         size: "small",
@@ -295,10 +295,10 @@ const ShipmentDetails = () => {
             </Grid>
             <Grid size={lay}>
               <FormControl fullWidth variant="outlined">
-                <FormLabel sx={{ fontSize: "0.875rem", mb: 1 }}>BL/AWB Date</FormLabel>
+                <FormLabel sx={{ fontSize: "0.875rem" }}>BL/AWB Date</FormLabel>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
-                    label="BL/AWB Date"
+                    // label="BL/AWB Date"
                     value={blAwbDate}
                     onChange={(newVal) => setBlAwbDate(newVal)}
                     slotProps={{
@@ -341,10 +341,9 @@ const ShipmentDetails = () => {
             </Grid>
             <Grid size={lay}>
               <FormControl fullWidth variant="outlined">
-                <FormLabel sx={{ fontSize: "0.875rem", mb: 1 }}>Shipment Date</FormLabel>
+                <FormLabel sx={{ fontSize: "0.875rem"}}>Shipment Date</FormLabel>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
-                    label="Shipment Date"
                     value={shipmentDate}
                     onChange={(newVal) => setShipmentDate(newVal)}
                     slotProps={{
@@ -352,10 +351,12 @@ const ShipmentDetails = () => {
                         size: "small",
                         fullWidth: true,
                         InputProps: { disableUnderline: true },
-                        variant: "outlined"
+                        variant: "outlined",
+                        sx: { mb: "16px !important" }
                       }
                     }}
                   />
+
                 </LocalizationProvider>
               </FormControl>
             </Grid>
@@ -378,7 +379,7 @@ const ShipmentDetails = () => {
                 </Select>
               </FormControl>
             </Grid>
-            
+
             <Grid size={lay}>
               <FormControl fullWidth variant="outlined">
                 <FormLabel sx={{ alignSelf: 'start' }}>Vessel Name</FormLabel>
@@ -475,7 +476,7 @@ const ShipmentDetails = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid size={{md:12}}>
+            <Grid size={{ md: 12 }}>
               <Box sx={{ display: "flex", flexDirection: "column", mt: 2 }}>
                 <FormControlLabel
                   control={
@@ -520,7 +521,7 @@ const ShipmentDetails = () => {
                 </Select>
               </FormControl>
             </Grid>
-            
+
           </Grid>
         </DialogContent>
         <DialogActions>

@@ -22,6 +22,7 @@ const BasicDetails = () => {
                                 <TextField
                                     variant="standard" 
                                     size="small"
+                                    value="100008" 
                                     InputProps={{
                                         disableUnderline: true  
                                     }}
@@ -35,6 +36,7 @@ const BasicDetails = () => {
                                     variant="standard"  
                                     fullWidth
                                     size="small"
+                                    value={"Abhijeet Brothers Partnership Ltd."}
                                     InputProps={{
                                         disableUnderline: true  
                                     }}
@@ -71,6 +73,7 @@ const BasicDetails = () => {
                                     variant="standard"  
                                     fullWidth
                                     size="small"
+                                    value={"Eksar Lucky Star"}
                                     InputProps={{
                                         disableUnderline: true  
                                     }}
@@ -84,6 +87,7 @@ const BasicDetails = () => {
                                     variant="standard"  
                                     fullWidth
                                     size="small"
+                                    value={"Vashi, Navi Mumbai"}
                                     InputProps={{
                                         disableUnderline: true  
                                     }}
@@ -97,6 +101,7 @@ const BasicDetails = () => {
                                 <TextField
                                     variant="standard"  
                                     fullWidth
+                                    value={"Navi Mumbai"}
                                     size="small"
                                     InputProps={{
                                         disableUnderline: true  
@@ -111,6 +116,7 @@ const BasicDetails = () => {
                                 <TextField
                                     variant="standard" 
                                     fullWidth
+                                    value={"Country"}
                                     size="small"
                                     InputProps={{
                                         disableUnderline: true  
@@ -125,6 +131,7 @@ const BasicDetails = () => {
                                 <TextField
                                     variant="standard"  
                                     fullWidth
+                                    value={"abhijeet.kohli@gmail.com"}
                                     size="small"
                                     InputProps={{
                                         disableUnderline: true  
@@ -139,6 +146,7 @@ const BasicDetails = () => {
                                 <TextField
                                     variant="standard"  
                                     fullWidth
+                                    value={"98573657700"}
                                     size="small"
                                     InputProps={{
                                         disableUnderline: true 
@@ -153,6 +161,7 @@ const BasicDetails = () => {
                                 <TextField
                                     variant="standard" 
                                     fullWidth
+                                    value={"144637HJFJ88H"}
                                     size="small"
                                     InputProps={{
                                         disableUnderline: true  
@@ -167,6 +176,7 @@ const BasicDetails = () => {
                                 <TextField
                                     variant="standard"  
                                     fullWidth
+                                    value={"14/07/2025"}
                                     size="small"
                                     InputProps={{
                                         disableUnderline: true  
